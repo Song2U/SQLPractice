@@ -62,5 +62,3 @@ select first_name, job_id, salary, case job_id when 'AD_VP' then salary*1.1 else
 select first_name, job_id, salary, case job_id when 'AD_VP' then salary*1.1 when 'FI_MGR' then salary*1.5 else salary end as "이번달 월급" from EMPLOYEES; /* 이중 case문도 가능 */
 
 select first_name, job_id, salary, case job_id when 'AD_VP' then salary*1.1 when 'FI_MGR' then salary*1.5 else salary end as "case문", decode(job_id, 'AD_VP', salary*1.1, 'FI_MGR', salary*1.5, salary) as "decode문" from EMPLOYEES; /* decode 함수 (case 문과 유사)*/
-
-
