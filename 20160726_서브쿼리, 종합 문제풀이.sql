@@ -35,8 +35,10 @@ select max(avg(salary)) from EMPLOYEES ;
 
 
 -- 문제 4 --
-
-
+select d.department_name from EMPLOYEES e, DEPARTMENTs d where E.DEPARTMENT_ID=D.DEPARTMENT_ID group by D.DEPARTMENT_name;
+select max(avg(salary)) from employees
+where(select d.department_name from EMPLOYEES e, DEPARTMENTs d where E.DEPARTMENT_ID=D.DEPARTMENT_ID group by D.DEPARTMENT_name)
+=DEPARTMENT_ID group by salary;
 -- 문제 5 --
 
 
